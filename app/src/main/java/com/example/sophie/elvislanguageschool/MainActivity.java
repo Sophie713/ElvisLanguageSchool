@@ -21,28 +21,31 @@ public class MainActivity extends AppCompatActivity {
     public void address(View view) {
         Intent map = new Intent(Intent.ACTION_VIEW);
         map.setData(Uri.parse("geo:50.0581047,14.4301882"));
-        startActivity(map);
+        if (map.resolveActivity(getPackageManager()) != null) {
+        startActivity(map);}
     }
 
     public void call(View view) {
         Intent call = new Intent(Intent.ACTION_CALL);
-        call.setData(Uri.parse("+420602350632"));
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-            return;
-        }
-        startActivity(call);
+        call.setData(Uri.parse("tel:+420602350632"));
+        if (call.resolveActivity(getPackageManager()) != null) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
+            startActivity(call);}
     }
 
     public void email(View view){
-        Intent email = new Intent(Intent.ACTION_SEND);
-        email.setData(Uri.parse("mailto:"));
-        email.putExtra(Intent.EXTRA_EMAIL, R.string.email);
-        startActivity(email);
+        Intent email = new Intent(Intent.ACTION_SENDTO);
+        email.setData(Uri.parse("mailto:elvis@elvis.cz"));
+        if (email.resolveActivity(getPackageManager()) != null) {
+        startActivity(email);}
     }
 
     public void web(View view) {
         Intent web = new Intent(Intent.ACTION_VIEW);
         web.setData(Uri.parse("http://www.elvis.cz/"));
-        startActivity(web);
+        if (web.resolveActivity(getPackageManager()) != null) {
+        startActivity(web);}
     }
 }
