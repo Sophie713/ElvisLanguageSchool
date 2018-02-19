@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.example.sophie.elvislanguageschool.MainActivity">
+
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/girlbook"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:padding="16dp">
+
+    <ImageView
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@drawable/elvislogo" />
+
+        <TextView
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:text="@string/name"
+            android:layout_marginTop="80dp"
+            />
+    <TextView
+        style="@style/Heading"
+        android:layout_width="match_parent"
+        android:text="@string/text"
+
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="16dp">
+
+
+
+
+        <TextView
+        style="@style/PlainText"
+        android:onClick="address"
+        android:text="@string/street"
+     />
+
+    <TextView
+        style="@style/PlainText"
+        android:onClick="address"
+        android:text="@string/city"
+       />
+
+    <TextView
+        style="@style/PlainText"
+        android:onClick="web"
+        android:text="@string/web"
+        />
+
+    <TextView
+        style="@style/PlainText"
+        android:onClick="email"
+        android:text="@string/email"
+      />
+
+    <TextView
+        style="@style/PlainText"
+        android:onClick="call"
+        android:text="@string/phone"
+        android:layout_marginBottom="20dp"
+     />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="18dp">
+
+        <ImageView
+            style="@style/Icon"
+            android:src="@drawable/place"
+            android:layout_marginBottom="40dp"
+            />
+        <ImageView
+            style="@style/Icon"
+            android:src="@drawable/comp"
+            android:layout_marginBottom="30dp"
+            />
+        <ImageView
+            style="@style/Icon"
+            android:src="@drawable/phone"
+            android:layout_marginBottom="30dp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

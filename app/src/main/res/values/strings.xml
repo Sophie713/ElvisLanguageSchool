@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Elvis Language School</string>
+    <string name="name">Jazyková škola Elvis</string>
+    <string name="street">Na Pankráci 54</string>
+    <string name="city">Praha 4</string>
+    <string name="web">www.elvis.cz</string>
+    <string name="email">elvis@elvis.cz</string>
+    <string name="text">Pokud se chcete jazyk doopravdy naučit.</string>
+    <string name="phone">602 350 632</string>
+</resources>
